@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="390.0" prefWidth="665.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DataSceneController">
+   <children>
+      <Button layoutX="14.0" layoutY="346.0" mnemonicParsing="false" onAction="#switchToHomeScene" prefHeight="25.0" prefWidth="65.0" styleClass="specialButton" stylesheets="@style.css" text="Back">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+      <Button layoutX="516.0" layoutY="347.0" mnemonicParsing="false" onAction="#encode" prefHeight="27.0" prefWidth="107.0" styleClass="specialButton" stylesheets="@style.css" text="Compress">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+      <Button layoutX="347.0" layoutY="347.0" mnemonicParsing="false" onAction="#decode" prefHeight="27.0" prefWidth="107.0" styleClass="specialButton" stylesheets="@style.css" text="Decompress">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+      <TextArea layoutX="14.0" layoutY="14.0" prefHeight="161.0" prefWidth="636.0" fx:id="xml" />
+      <TextArea fx:id="info" layoutX="14.0" layoutY="179.0" prefHeight="126.0" prefWidth="636.0" />
+      <Button layoutX="164.0" layoutY="347.0" mnemonicParsing="false" onAction="#minifying" prefHeight="25.0" prefWidth="81.0" styleClass="specialButton" stylesheets="@style.css" text="Minifying" />
+   </children>
+</AnchorPane>

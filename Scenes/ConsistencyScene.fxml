@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="390.0" prefWidth="665.0" styleClass="parrent" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ConsistencySceneController">
+   <children>
+      <VBox alignment="TOP_CENTER" layoutX="14.0" layoutY="14.0" prefHeight="326.0" prefWidth="200.0" styleClass="anchor" stylesheets="@style.css">
+         <children>
+            <Label />
+            <AnchorPane prefHeight="93.0" prefWidth="204.0">
+               <children>
+                  <Text layoutX="13.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose the operation you want to apply for the following xml file" textAlignment="CENTER" wrappingWidth="182.416015625">
+                     <font>
+                        <Font name="Calibri" size="16.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+            <Button mnemonicParsing="false" onAction="#showErrors" prefHeight="39.0" prefWidth="204.0" stylesheets="@style.css" text="Show Error (s)">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Label>
+               <font>
+                  <Font size="5.0" />
+               </font>
+            </Label>
+            <Label prefHeight="0.0" prefWidth="189.0">
+               <font>
+                  <Font size="5.0" />
+               </font>
+            </Label>
+            <Button mnemonicParsing="false" onAction="#correctErrors" prefHeight="41.0" prefWidth="204.0" stylesheets="@style.css" text="Correct the Error (s)">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
+            <Label />
+            <Button mnemonicParsing="false" onAction="#showXml" prefHeight="40.0" prefWidth="196.0" text="Show Xml File">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+      <Button layoutX="21.0" layoutY="351.0" mnemonicParsing="false" onAction="#switchToHomeScene" prefHeight="25.0" prefWidth="65.0" styleClass="specialButton" stylesheets="@style.css" text="Back">
+         <font>
+            <Font size="13.0" />
+         </font></Button>
+      <AnchorPane layoutX="226.0" layoutY="14.0" prefHeight="315.0" prefWidth="433.0" styleClass="anchor" stylesheets="@style.css">
+         <children>
+            <TextArea fx:id="areaConsistency" editable="false" layoutX="14.0" layoutY="14.0" prefHeight="286.0" prefWidth="407.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
