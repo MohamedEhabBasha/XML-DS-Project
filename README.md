@@ -18,7 +18,7 @@ should also work on designing the program such that it makes use of optimal data
   - Show xml file: show the original xml file if the user need to compare the original file and the modified file.
 
  
- ### Concert to Json
+ ### Convert to Json
  As json file are important, we will cover how to convert from xml to json file
  
  ### Data Compression and Decompression
