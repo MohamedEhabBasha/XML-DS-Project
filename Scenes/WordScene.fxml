@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="389.0" prefWidth="665.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="WordController">
+   <children>
+      <Label layoutX="300.0" layoutY="171.0" />
+      <AnchorPane layoutX="22.0" layoutY="19.0" prefHeight="323.0" prefWidth="623.0" styleClass="anchor" stylesheets="@style.css">
+         <children>
+            <Label layoutX="208.0" layoutY="14.0" prefHeight="63.0" prefWidth="208.0" text="Enter a word to search for :">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <TextField fx:id="word" layoutX="231.0" layoutY="77.0" prefHeight="38.0" prefWidth="162.0" promptText="Enter Here">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextField>
+            <Button layoutX="262.0" layoutY="261.0" mnemonicParsing="false" onAction="#search" prefHeight="27.0" prefWidth="101.0" styleClass="specialButton" stylesheets="@style.css" text="Search">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Label alignment="TOP_LEFT" layoutX="182.0" layoutY="146.0" prefHeight="31.0" prefWidth="260.0" text="Choose where you want to search ">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <RadioButton fx:id="body" layoutX="81.0" layoutY="213.0" mnemonicParsing="false" text="Search in body of posts">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="search" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="topics" layoutX="416.0" layoutY="213.0" mnemonicParsing="false" text="Search in topics" toggleGroup="$search">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </RadioButton>
+         </children>
+      </AnchorPane>
+      <Button layoutX="14.0" layoutY="354.0" mnemonicParsing="false" onAction="#back" prefHeight="25.0" prefWidth="65.0" styleClass="specialButton" stylesheets="@style.css" text="Back">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
