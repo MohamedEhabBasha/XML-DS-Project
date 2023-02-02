@@ -12,15 +12,19 @@ should also work on designing the program such that it makes use of optimal data
 
 ## Functionalities of the Project
  ### Check Consistency  
- after taking the xml fron the user 
+ After taking the xml fron the user 
   - it will show the positions of the errors in the xml file or show that the xml file has no errors.
   - Correct the error: it will correct the errors if exists.
- - Show xml file: show the original xml file if the user need to compare the original file and the modified file.
+  - Show xml file: show the original xml file if the user need to compare the original file and the modified file.
 
  
- ###
+ ### Concert to Json
+ As json file are important, we will cover how to convert from xml to json file
  
- ###
+ ### Data Compression and Decompression
+  - we will minify(remove the spaces and new lines from the xml file) to reduce the size of the file.
+  - Compress: using Huffman method, it compress the file and show the result to the user and comparing the original size and the reduced one
+  - Decompress: it returns the xml file to its original text with the original size and show it to the user.
  
  
  ###
