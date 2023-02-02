@@ -27,14 +27,12 @@ should also work on designing the program such that it makes use of optimal data
   - Decompress: it returns the xml file to its original text with the original size and show it to the user.
  
  
- ###
- 
- ###
- 
- ###
- 
- ###
- 
- ###
- 
- ###
+ ### Graph Representation
+   - Show most influencer: it shows the user that has most followers
+   - Show most active user: it shows the user thar has large following list.
+   - Mutual followers between users: it leads you to screen where you enter the id of the two users and will show the common followers between them.
+   - Suggestion list for each user: it will show the followers of the of the followers for each user.
+   - Search for a word: it leads you to screen where you enter a word and it will shows the posts or the topics that word exist in.
+
+
+
