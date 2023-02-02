@@ -9,3 +9,27 @@ As Networks are around us we will use the xml to represent the social network us
 In this project, we will learn how to understand and parse XML and json files. Additionally, we
 will work on designing a GUI (Graphical User Interface) to visualize XML and json files. we
 should also work on designing the program such that it makes use of optimal data structures for the implemented features.
+
+## Functionalities of the Project
+ ### Check Consistency : after taking the xml fron the user 
+ #### it will show the positions of the errors in the xml file or show that the xml file has no errors.
+ #### Correct the error: it will correct the errors if exists.
+ #### Show xml file: show the original xml file if the user need to compare the original file and the modified file.
+
+ 
+ ###
+ 
+ ###
+ 
+ 
+ ###
+ 
+ ###
+ 
+ ###
+ 
+ ###
+ 
+ ###
+ 
+ ###
