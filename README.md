@@ -12,10 +12,10 @@ should also work on designing the program such that it makes use of optimal data
 
 ## Functionalities of the Project
  ### Check Consistency  
- #### after taking the xml fron the user 
- ####  - it will show the positions of the errors in the xml file or show that the xml file has no errors.
- ####  - Correct the error: it will correct the errors if exists.
- ####  - Show xml file: show the original xml file if the user need to compare the original file and the modified file.
+ after taking the xml fron the user 
+  - it will show the positions of the errors in the xml file or show that the xml file has no errors.
+  - Correct the error: it will correct the errors if exists.
+ - Show xml file: show the original xml file if the user need to compare the original file and the modified file.
 
  
  ###
