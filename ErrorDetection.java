@@ -10,6 +10,7 @@ import java.io.InputStreamReader;
 import java.util.*;
 public class ErrorDetection {
 	static String errorByString(String gin) {
+		// translate the string that contain data into vector of strings
 		String name = "conan.xml";
 		File vodka = new File(name);
 		 try {
@@ -57,11 +58,15 @@ public class ErrorDetection {
                 
             }
         }
+        //--------------------------------------
+        //calling check error that do the work 
         file = checkError(file);
 		
+        //turn into string
 		return toString(file);
 	}
-	static String errorByPath(String path) {
+	public static String errorByPath(String path) {
+		// translate the string that contain path into vector of strings
         FileInputStream fis = null;
         BufferedReader reader = null;
         Vector<String> file = new Vector<>();
@@ -88,7 +93,10 @@ public class ErrorDetection {
                 
             }
         }
+        //--------------------------------------
+        //calling check error that do the work 
         file = checkError(file);
+        //turn into string
         return toString(file);
 	}
 	
@@ -102,14 +110,17 @@ public class ErrorDetection {
 	}
 	static Vector<String> checkError(Vector<String> v){
 		Vector<String> file = v;
-		//Stack<String> s = new Stack<>();
+		// Define a stack by using vector of Pairs
 		Vector<Pair> data = new Vector<>();
 		int n = file.size();
+		// iterate over the XML file line by line
 		for(int i=0;i<n;i++) {
 			String temp = file.get(i);
+			//handle the case if it open tag
 			if(openTag(temp)) {
 				data.add(new Pair(getTag(temp),i));
 			}
+			//handle the case if it close tag
 			else if(closeTag(temp)) {
 				String g =getTag(temp);
 				if(search(data,g)) {
@@ -126,11 +137,27 @@ public class ErrorDetection {
 				}else {
 					file.set(i, addError(temp));
 				}
-			}else if(hasOnlyData(temp)) {}
+			}
+			// skip if the line has only data or spaces
+			else if(hasOnlyData(temp)) {}
 			else if(onlySpace(temp)) {
 
 			}
+			//Handle the case if the line written in a way differ from previous cases
 			else {
+				int count = 0;
+				boolean ok = true;
+				for(int f=0;f<temp.length();f++) {
+
+					if(temp.charAt(f) == '<')count++;
+					else if(temp.charAt(f) == '>')count--;
+					if(count > 1 || count < 0) {
+						ok = false;
+						break;
+					}
+				}
+				if(!ok) file.set(i, addError(temp));
+				else {
 				Vector<String> arr = identifyLine(temp);
 				for(String e : arr) {
 					if(openTag(e)) data.add(new Pair(e,i));
@@ -147,9 +174,10 @@ public class ErrorDetection {
 								}
 							}
 						}else {
-							if(hasError(temp))	file.set(i, addError(temp));
+							if(!hasError(temp))	file.set(i, addError(temp));
 						}
 					}
+				}
 				}
 			}
 		}
@@ -192,7 +220,7 @@ public class ErrorDetection {
 		return o.equals(c);
 	}
 
-	static boolean hasData(String line) {
+	/*static boolean hasData(String line) {
 		int size = line.length();
 		int l=0;
 		while(l<size) {
@@ -206,7 +234,7 @@ public class ErrorDetection {
 			l++;
 		}
 		return false;
-	}
+	}*/
 	static boolean hasOnlyData(String line) {
 		int size = line.length();
 		boolean ok = false;
